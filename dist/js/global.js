@@ -1,3 +1,4 @@
+// hide/show menu
 const menu = document.querySelector("section.contact");
 const menuButton = document.querySelector("a.menu");
 const closeButton = document.querySelector("a.close-menu");
@@ -49,7 +50,7 @@ grabData().then(data => {
     sectionTag.innerHTML =
       sectionTag.innerHTML +
       `
-      <div class="photo">
+      <div class="photo" data-parallax="0.5">
         <div class="overlay">
           <h3>${item.title}</h3>
           <h5>${item.year}</h5>
@@ -58,5 +59,25 @@ grabData().then(data => {
         <img src="${item.image}" />
       </div>
 	`;
+  });
+});
+
+// parallax
+document.addEventListener("scroll", function() {
+  const topView = window.pageYOffset;
+  const midView = topView + 0.5 * window.innerHeight;
+
+  sections.forEach(section => {
+    const topSection = section.offsetTop;
+    const midSection = topSection + section.offsetHeight / 2;
+
+    const distanceToSection = midView - midSection;
+
+    const parallaxTags = section.querySelectorAll(`[data-parallax]`);
+
+    parallaxTags.forEach(tag => {
+      const speed = parseFloat(tag.getAttribute("data-parallax"));
+      tag.style.transform = `translate(0, ${distanceToSection * speed}px)`;
+    });
   });
 });
