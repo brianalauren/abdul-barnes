@@ -9,9 +9,10 @@ body {
   font-weight: 400;
   line-height: 1.45;
   color: #fff;
+  border: solid white 10px;
+
   background: linear-gradient(24deg, #ff0000, #585ace, #398931);
   background-size: 600% 600%;
-  border: solid white 10px;
 
   -webkit-animation: Gradient 29s ease infinite;
   animation: Gradient 29s ease infinite;
@@ -85,15 +86,9 @@ small,
 a {
   color: #fff;
   text-decoration: none;
-  // font-family: "Anton", sans-serif;
-
-  // &:hover {
-  //   text-decoration: line-through;
-  // }
 }
 
 section.home {
-  // position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,7 +101,6 @@ section.home {
   div {
     width: 30vw;
     text-align: center;
-    // border: white 5px solid;
     padding: 24px;
 
     a {
@@ -115,16 +109,16 @@ section.home {
   }
 }
 
-section.title {
+header {
+  position: fixed;
   display: flex;
   justify-content: center;
-  // position: fixed;
   flex-wrap: wrap;
   top: 0;
   left: 0;
-  // margin: 24px;
   width: 100vw;
   height: 80px;
+  padding-top: 36px;
 
   z-index: 5;
 
@@ -144,12 +138,11 @@ section.title {
   }
 }
 
-.show-menu {
-  transform: translateY(100%);
-}
+// .show-menu {
+//   transform: translateY(100%);
+// }
 
 section.contact {
-  transform: translateY(-100%);
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.8);
@@ -158,10 +151,12 @@ section.contact {
   top: 0;
   left: 0;
 
-  display: flex;
+  // display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+
+  display: none;
 
   z-index: 5;
 
@@ -187,7 +182,7 @@ section.images {
   justify-content: center;
 
   div.photo {
-    margin: 24px;
+    margin: 40px;
     position: relative;
 
     img {
@@ -197,15 +192,16 @@ section.images {
 
     .overlay {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 50%;
+      left: 50%;
+      width: 95%;
+      height: 93%;
+      transform: translate(-50%, -51%);
       background-color: rgba(255, 255, 255, 0.9);
       opacity: 0;
       transition: opacity 0.3s;
       margin: 0;
-      padding: 0;
+      // padding: -24px;
       mix-blend-mode: screen;
 
       pointer-events: none;
@@ -219,10 +215,6 @@ section.images {
         margin: 0;
         color: black;
         padding: 8px;
-      }
-
-      p {
-        // font-weight: 700;
       }
     }
 
@@ -240,8 +232,6 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  // height: 10vh;
-  // padding: 16px;
 
   a {
     padding: 16px;
