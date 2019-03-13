@@ -273,6 +273,23 @@ footer {
 }
 
 @media (max-width: 760px) {
+  section.home div {
+    transform: translate(-2%, -25%);
+  }
+
+  section.contact div {
+    transform: translateY(-15%);
+    a {
+      // margin: 20px 10px;
+      line-height: 1.5;
+      font-size: 32px;
+      display: block;
+    }
+    div {
+      padding-top: 15px;
+    }
+  }
+
   html {
     font-size: 18px;
   }
