@@ -10,35 +10,6 @@ body {
   line-height: 1.45;
   color: #fff;
   border: solid white 10px;
-
-  background: linear-gradient(24deg, #ff0000, #585ace, #398931);
-  background-size: 600% 600%;
-
-  -webkit-animation: Gradient 30s ease infinite;
-  animation: Gradient 30s ease infinite;
-
-  @-webkit-keyframes Gradient {
-    0% {
-      background-position: 100% 0%;
-    }
-    50% {
-      background-position: 0% 100%;
-    }
-    100% {
-      background-position: 100% 0%;
-    }
-  }
-  @keyframes Gradient {
-    0% {
-      background-position: 100% 0%;
-    }
-    50% {
-      background-position: 0% 100%;
-    }
-    100% {
-      background-position: 100% 0%;
-    }
-  }
 }
 
 p {
