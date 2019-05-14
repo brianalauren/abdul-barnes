@@ -63,21 +63,21 @@ grabData().then(data => {
 });
 
 // parallax
-document.addEventListener("scroll", function() {
-  const topView = window.pageYOffset;
-  const midView = topView + 0.5 * window.innerHeight;
-
-  sections.forEach(section => {
-    const topSection = section.offsetTop;
-    const midSection = topSection + section.offsetHeight / 2;
-
-    const distanceToSection = midView - midSection;
-
-    const parallaxTags = section.querySelectorAll(`[data-parallax]`);
-
-    parallaxTags.forEach(tag => {
-      const speed = parseFloat(tag.getAttribute("data-parallax"));
-      tag.style.transform = `translate(0, ${distanceToSection * speed}px)`;
-    });
-  });
-});
+// document.addEventListener("scroll", function() {
+//   const topView = window.pageYOffset;
+//   const midView = topView + 0.5 * window.innerHeight;
+//
+//   sections.forEach(section => {
+//     const topSection = section.offsetTop;
+//     const midSection = topSection + section.offsetHeight / 2;
+//
+//     const distanceToSection = midView - midSection;
+//
+//     const parallaxTags = section.querySelectorAll(`[data-parallax]`);
+//
+//     parallaxTags.forEach(tag => {
+//       const speed = parseFloat(tag.getAttribute("data-parallax"));
+//       tag.style.transform = `translate(0, ${distanceToSection * speed}px)`;
+//     });
+//   });
+// });
